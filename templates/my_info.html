@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+My Info 
+{% endblock %}
+
+{% block main %}
+<!--     have to add a form here  -->
+<!-- Adding a profile section with username and -->
+
+<h1>Welcome: {{username}}</h1>
+
+
+
+{% endblock %}
+
+{% block body %}
+<form action="/my_info" method="post">
+  <p>
+    <h3>What environment are you in </h3>
+    <input type="radio" name="environment" id="rural" value="rural" checked> Rural <br>
+    <input type="radio" name="environment" id="suburb" value="suburb"> Suburban <br>
+    <input type="radio" name="environment" id="urban" value="urban"> Urban <br>
+  </p>
+
+
+  <P>
+    <h3>How are you feeling today </h3>
+    <input type="radio" name="feeling" id="super_happy" value="super_happy"> Super Happy <br>
+    <input type="radio" name="feeling" id="happy" value="happy"> Happy <br>
+    <input type="radio" name="feeling" id="meh" value="meh" checked> Meh <br>
+    <input type="radio" name="feeling" id="sad" value="sad"> Sad <br>
+    <input type="radio" name="feeling" id="super_sad" value="super sad"> Super Sad <br>
+  </P>
+  
+  <p><input type=submit value=Submit {% if submit %}disabled{% endif %}></p>
+</form>
+{% endblock %}
