@@ -364,6 +364,7 @@ font-family:monospace;
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 20px;
 }
 ::-webkit-scrollbar-track {
   background: black;
